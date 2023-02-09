@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Noto+Serif+Ahom&family=Source+Code+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Noto+Serif+Ahom&family=Source+Code+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Babylonica&family=Electrolize&family=Noto+Serif+Ahom&family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Babylonica&family=Electrolize&family=Noto+Serif+Ahom&family=Oswald:wght@700&family=Sassy+Frass&family=Source+Code+Pro:wght@300&display=swap');
 
 * {
     margin: 0px;
@@ -11,13 +12,12 @@
 
 body {
     background-color: whitesmoke;
+    text-align: center;
 }
 
-aside {}
 
 
 header {
-    background-color: black;
     opacity: 0.8;
     width: 100%;
     color: white;
@@ -26,37 +26,45 @@ header {
     font-family: 'Electrolize', sans-serif;
     font-family: 'Noto Serif Ahom', serif;
     font-weight: bolder;
+    padding-top: 20px;
 }
+
 
 aside {
     background-color: white;
     float: left;
 }
 
-.left {
+.left 
+{
     padding: 0px;
-    border: 1px solid black;
+    background:transparent;
+    text-align: left;
+    width: 15%;
 }
 
 
 
-nav {
-    background-color: black;
-}
 
 nav img {
     width: 20%;
     height: 20%;
     border: 5px solid white;
+    border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
 
-nav img:hover
-{
+nav img:hover {
     transition: 1s;
+    -moz-box-shadow: 5px 5x 5px orangered;
+    -webkit-box-shadow: 5px 5px 5px orangered;
+    -khtml-box-shadow: 5px 5px 5px orangered;
     transform: rotate(360deg);
+    box-shadow: 20px white;
+    border: 5px solid orangered;
 }
+
 
 nav ol li a {
     color: white;
@@ -90,25 +98,50 @@ i {
 }
 
 
+
+.hide
+{
+    transition:0.5s;
+    display: none;
+    color: white;
+    font-size: 30px;
+    
+}
+
 .leftasidesec {
-    margin: 20px 10px;
+    font-size: 35px ;
+    margin-top: 10px;
+    margin-left: 10px;
     padding: 10px;
     background-color: transparent;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Electrolize', sans-serif;
     font-family: 'Noto Serif Ahom', serif;
     font-family: 'Source Code Pro', monospace;
-    position: relative;
     border-radius: 10px;
 }
 
-.leftasidesec:hover {
+.leftasidesec:hover>.hide{
     color: whitesmoke;
-    background-color: black;
-    opacity: 0.8;
-    transition: 0.5s;
+    background-color: transparent;
+    font-weight: bold;
     cursor: pointer;
+    display: inline-block;
+    transition: 1s;
+
+}
+
+main {
+
+    background-color: transparent;
+    width: 70%;
+    float: left;
+    font-family: 'Electrolize', sans-serif;
+    font-family: 'Noto Serif Ahom', serif;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    margin: 20px;
 }
 
 .mainimg {
@@ -135,37 +168,55 @@ p {
     overflow: hidden;
 }
 
-main section div
-{
+main section div {
     display: inline-block;
     width: 30%;
     height: 30%;
     margin: 10px;
+    transition: 1s;
+    color: white;
 }
 
-main {
-    background-color: transparent;
-    width: 60%;
-    float: left;
-    font-family: 'Electrolize', sans-serif;
-    font-family: 'Noto Serif Ahom', serif;
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
+
+
+main section div:hover
+{
+    transition: 1s;
+    color: orangered;
+    font-size: 25px;
+    text-shadow: 3px orangered;
 }
 
 .mainheadsec {
+    color: white;
     margin: 10px;
-    font-weight: bold;
-    font-size: 2em;
+    font-weight: bolder;
+    font-size: 3.5em;
     text-align: center;
     padding: 10px;
 }
 
-.mainbodysec
-{
+.mainbodysec {
 
     padding: 10px;
     text-align: center;
+}
+
+
+
+main video {
+
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+
 }
 
 footer {
@@ -176,11 +227,61 @@ footer {
     clear: both;
     padding: 20px;
     text-align: center;
+    font-family: 'Anton', sans-serif;
 }
 
-footer section
-{
+footer section {
     text-align: center;
     font-size: 40px;
     margin: 10px;
+
+}
+
+footer section div {
+    display: inline-block;
+    text-align: center;
+}
+
+.fb i {
+    color: white;
+    transition: 1s;
+}
+
+.insta i {
+    transition: 1s;
+    color: white;
+}
+
+.ytb i {
+    transition: 1s;
+    color: white;
+}
+
+.insta i:hover {
+    background-color: white;
+    color: rgb(195, 26, 144);
+    border: 5px solid rgb(195, 26, 144);
+    ;
+    border-radius: 10px 0px 10px 10px;
+    transition: 0.5s;
+}
+
+
+
+.ytb i:hover {
+    background-color: white;
+    color: orangered;
+    border: 5px solid orangered;
+    border-radius: 10px 0px 10px 10px;
+    transition: 0.5s;
+}
+
+
+
+.fb i:hover {
+    background-color: white;
+    color: blue;
+    border: 5px solid blue;
+    border-radius: 10px 0px 10px 10px;
+    transition: 0.5s;
 }
